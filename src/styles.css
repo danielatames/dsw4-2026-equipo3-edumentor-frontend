@@ -1,0 +1,4 @@
+label { display: block; margin-top: 1rem; }
+input, select { display: block; width: 100%; padding: .5rem; }
+.error { color: #b00020; }
+:focus-visible { outline: 3px solid #1a73e8; outline-offset: 2px; }
