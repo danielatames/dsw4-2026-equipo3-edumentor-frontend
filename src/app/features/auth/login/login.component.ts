@@ -3,33 +3,37 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
 import { AuthService } from '../../../core/services/auth.service';
+import { AuthShellComponent } from '../../../shared/auth-shell/auth-shell.component';
 
 @Component({
   selector: 'app-login',
-  imports: [ReactiveFormsModule, RouterLink],
+  imports: [ReactiveFormsModule, RouterLink, AuthShellComponent],
   template: `
-    <h1>Iniciar sesión</h1>
-    <form [formGroup]="form" (ngSubmit)="enviar()" novalidate>
-      <div>
-        <label for="email">Correo electrónico</label>
-        <input id="email" type="email" formControlName="email" autocomplete="username" />
-        @if (form.controls.email.touched && form.controls.email.invalid) {
-          <p class="error" role="alert">Ingrese un correo válido.</p>
+    <app-auth-shell>
+      <h1>Iniciar sesión</h1>
+      <p class="subtitle">Ingrese con su correo institucional.</p>
+      <form [formGroup]="form" (ngSubmit)="enviar()" novalidate>
+        <div class="field">
+          <label for="email">Correo electrónico</label>
+          <input id="email" type="email" formControlName="email" autocomplete="username" />
+          @if (form.controls.email.touched && form.controls.email.invalid) {
+            <p class="error" role="alert">Ingrese un correo válido.</p>
+          }
+        </div>
+        <div class="field">
+          <label for="password">Contraseña</label>
+          <input id="password" type="password" formControlName="password" autocomplete="current-password" />
+          @if (form.controls.password.touched && form.controls.password.invalid) {
+            <p class="error" role="alert">La contraseña es obligatoria.</p>
+          }
+        </div>
+        @if (error()) {
+          <p class="error" role="alert">{{ error() }}</p>
         }
-      </div>
-      <div>
-        <label for="password">Contraseña</label>
-        <input id="password" type="password" formControlName="password" autocomplete="current-password" />
-        @if (form.controls.password.touched && form.controls.password.invalid) {
-          <p class="error" role="alert">La contraseña es obligatoria.</p>
-        }
-      </div>
-      @if (error()) {
-        <p class="error" role="alert">{{ error() }}</p>
-      }
-      <button type="submit" [disabled]="cargando()">Ingresar</button>
-    </form>
-    <p>¿No tiene cuenta? <a routerLink="/register">Regístrese</a></p>
+        <button type="submit" class="btn" [disabled]="cargando()">Ingresar</button>
+      </form>
+      <p class="alt">¿No tiene cuenta? <a routerLink="/register">Regístrese</a></p>
+    </app-auth-shell>
   `,
 })
 export class LoginComponent {
