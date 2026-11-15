@@ -1,0 +1,60 @@
+{
+  "app": {
+    "name": "EduMentor Hub",
+    "skip": "Saltar al contenido",
+    "logout": "Cerrar sesión"
+  },
+  "idioma": {
+    "etiqueta": "Idioma",
+    "es": "Español",
+    "en": "English"
+  },
+  "roles": {
+    "ESTUDIANTE": "Estudiante",
+    "TUTOR": "Tutor",
+    "COORDINADOR": "Coordinador"
+  },
+  "auth": {
+    "aside": "Aprende de quien ya pasó por ahí.",
+    "login": {
+      "titulo": "Iniciar sesión",
+      "subtitulo": "Ingrese con su correo institucional.",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "enviar": "Ingresar",
+      "sinCuenta": "¿No tiene cuenta?",
+      "registrese": "Regístrese",
+      "errorEmail": "Ingrese un correo válido.",
+      "errorPassword": "La contraseña es obligatoria.",
+      "errorGenerico": "No se pudo iniciar sesión."
+    },
+    "register": {
+      "titulo": "Crear cuenta",
+      "subtitulo": "Únase como estudiante o como tutor.",
+      "carne": "Carné",
+      "nombre": "Nombre",
+      "apellido": "Apellido",
+      "email": "Correo electrónico",
+      "password": "Contraseña (mínimo 8 caracteres)",
+      "rol": "Rol",
+      "enviar": "Registrarme",
+      "conCuenta": "¿Ya tiene cuenta?",
+      "iniciar": "Inicie sesión",
+      "errorCarne": "El carné es obligatorio.",
+      "errorNombre": "El nombre es obligatorio.",
+      "errorApellido": "El apellido es obligatorio.",
+      "errorEmail": "Ingrese un correo válido.",
+      "errorPassword": "La contraseña debe tener al menos 8 caracteres.",
+      "errorGenerico": "No se pudo completar el registro."
+    }
+  },
+  "home": {
+    "saludo": "Hola, {{nombre}}",
+    "sesionComo": "Ha iniciado sesión como",
+    "probar": "Probar /usuarios/me"
+  },
+  "accesoDenegado": {
+    "titulo": "Acceso denegado",
+    "detalle": "No tiene permisos para ver esta página."
+  }
+}

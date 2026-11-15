@@ -1,0 +1,60 @@
+{
+  "app": {
+    "name": "EduMentor Hub",
+    "skip": "Skip to content",
+    "logout": "Sign out"
+  },
+  "idioma": {
+    "etiqueta": "Language",
+    "es": "Español",
+    "en": "English"
+  },
+  "roles": {
+    "ESTUDIANTE": "Student",
+    "TUTOR": "Tutor",
+    "COORDINADOR": "Coordinator"
+  },
+  "auth": {
+    "aside": "Learn from those who have been there.",
+    "login": {
+      "titulo": "Sign in",
+      "subtitulo": "Sign in with your institutional email.",
+      "email": "Email address",
+      "password": "Password",
+      "enviar": "Sign in",
+      "sinCuenta": "Don't have an account?",
+      "registrese": "Sign up",
+      "errorEmail": "Enter a valid email address.",
+      "errorPassword": "The password is required.",
+      "errorGenerico": "Could not sign in."
+    },
+    "register": {
+      "titulo": "Create account",
+      "subtitulo": "Join as a student or as a tutor.",
+      "carne": "Student ID",
+      "nombre": "First name",
+      "apellido": "Last name",
+      "email": "Email address",
+      "password": "Password (minimum 8 characters)",
+      "rol": "Role",
+      "enviar": "Sign me up",
+      "conCuenta": "Already have an account?",
+      "iniciar": "Sign in",
+      "errorCarne": "The student ID is required.",
+      "errorNombre": "The first name is required.",
+      "errorApellido": "The last name is required.",
+      "errorEmail": "Enter a valid email address.",
+      "errorPassword": "The password must be at least 8 characters long.",
+      "errorGenerico": "Could not complete the registration."
+    }
+  },
+  "home": {
+    "saludo": "Hello, {{nombre}}",
+    "sesionComo": "You are signed in as",
+    "probar": "Test /usuarios/me"
+  },
+  "accesoDenegado": {
+    "titulo": "Access denied",
+    "detalle": "You do not have permission to view this page."
+  }
+}
