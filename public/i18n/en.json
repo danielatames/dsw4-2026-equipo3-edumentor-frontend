@@ -115,5 +115,80 @@
     "errorGenerico": "Could not record the evaluation.",
     "esperando": "Waiting for the student's evaluation.",
     "noDisponible": "The evaluation will be available once the session is completed."
+  },
+  "nav": {
+    "principal": "Main navigation",
+    "sesiones": "My sessions"
+  },
+  "dias": {
+    "MONDAY": "Monday",
+    "TUESDAY": "Tuesday",
+    "WEDNESDAY": "Wednesday",
+    "THURSDAY": "Thursday",
+    "FRIDAY": "Friday",
+    "SATURDAY": "Saturday",
+    "SUNDAY": "Sunday"
+  },
+  "sesiones": {
+    "titulo": "Tutoring sessions",
+    "nueva": "Book a session",
+    "filtro": "Filter by status",
+    "todos": "All statuses",
+    "cargando": "Loading sessions…",
+    "errorCarga": "Sessions could not be loaded.",
+    "vacio": "There are no sessions to show.",
+    "verDetalle": "View details",
+    "evaluar": "Rate session",
+    "ariaAccion": "{{accion}}: {{materia}} session",
+    "acciones": {
+      "aceptar": "Accept",
+      "rechazar": "Reject",
+      "cancelar": "Cancel",
+      "iniciar": "Start",
+      "concluir": "Finish"
+    },
+    "confirmar": {
+      "rechazar": "Reject this request?",
+      "cancelar": "Cancel this session?",
+      "si": "Yes, confirm",
+      "no": "No, go back"
+    },
+    "cancelarBloqueado": "Sessions can only be cancelled at least {{horas}} hours in advance.",
+    "exito": {
+      "aceptar": "Session accepted.",
+      "rechazar": "Request rejected.",
+      "cancelar": "Session cancelled.",
+      "iniciar": "Session started.",
+      "concluir": "Session finished."
+    },
+    "errorAccion": "The action could not be completed.",
+    "creada": "Session requested. It is now waiting for the tutor to accept it."
+  },
+  "nuevaSesion": {
+    "titulo": "Book a tutoring session",
+    "intro": "Choose the subject, the tutor and the time. The tutor will need to accept the request.",
+    "volver": "Back to my sessions",
+    "cargando": "Loading subjects and tutors…",
+    "errorCarga": "Subjects and tutors could not be loaded.",
+    "sinTutores": "There are no tutors with availability right now. Please try again later.",
+    "materia": "Subject",
+    "tutor": "Tutor",
+    "elegir": "Select…",
+    "disponibilidad": "{{nombre}}'s availability:",
+    "fecha": "Date",
+    "hora": "Start time",
+    "duracion": "Duration",
+    "tema": "Topic (optional)",
+    "enviar": "Request session",
+    "enviando": "Sending…",
+    "errorMateria": "Select a subject.",
+    "errorTutor": "Select a tutor.",
+    "errorFecha": "Select a date.",
+    "errorHora": "Select a time.",
+    "errorPasada": "The date and time must be in the future.",
+    "errorDuracion": "Duration must be between {{min}} and {{max}} minutes.",
+    "errorTema": "The topic cannot exceed 300 characters.",
+    "avisoDisponibilidad": "That time is outside the tutor's availability, so the system will probably reject the request.",
+    "errorGenerico": "The session could not be requested."
   }
 }
