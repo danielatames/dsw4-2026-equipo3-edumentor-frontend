@@ -115,5 +115,9 @@
     "errorGenerico": "No se pudo registrar la evaluación.",
     "esperando": "Esperando la evaluación del estudiante.",
     "noDisponible": "La evaluación estará disponible cuando la sesión concluya."
-  }
+  },
+  "nav": {
+  "principal": "Navegación principal",
+  "inicio": "Inicio"
+}
 }
