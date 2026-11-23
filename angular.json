@@ -32,7 +32,18 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "node_modules/@fontsource-variable/atkinson-hyperlegible-next/index.css",
+              "node_modules/@fontsource-variable/archivo/wdth.css",
+              "node_modules/@fontsource-variable/schibsted-grotesk/index.css",
+              "node_modules/@fontsource-variable/caveat/index.css",
+              "node_modules/@fontsource-variable/lexend/index.css",
+              "node_modules/@fontsource-variable/jetbrains-mono/index.css",
+              "src/styles.scss",
+              "src/estilos/ficha.scss",
+              "src/estilos/suizo.scss",
+              "src/estilos/pizarra.scss",
+              "src/estilos/metro.scss",
+              "src/estilos/boleto.scss"
             ],
             "scripts": []
           },
@@ -91,7 +102,18 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "node_modules/@fontsource-variable/atkinson-hyperlegible-next/index.css",
+              "node_modules/@fontsource-variable/archivo/wdth.css",
+              "node_modules/@fontsource-variable/schibsted-grotesk/index.css",
+              "node_modules/@fontsource-variable/caveat/index.css",
+              "node_modules/@fontsource-variable/lexend/index.css",
+              "node_modules/@fontsource-variable/jetbrains-mono/index.css",
+              "src/styles.scss",
+              "src/estilos/ficha.scss",
+              "src/estilos/suizo.scss",
+              "src/estilos/pizarra.scss",
+              "src/estilos/metro.scss",
+              "src/estilos/boleto.scss"
             ],
             "scripts": []
           }
