@@ -115,5 +115,9 @@
     "errorGenerico": "Could not record the evaluation.",
     "esperando": "Waiting for the student's evaluation.",
     "noDisponible": "The evaluation will be available once the session is completed."
-  }
+  },
+  "nav": {
+  "principal": "Main navigation",
+  "inicio": "Home"
+}
 }
