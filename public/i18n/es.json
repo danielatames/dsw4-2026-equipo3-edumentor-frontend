@@ -56,5 +56,64 @@
   "accesoDenegado": {
     "titulo": "Acceso denegado",
     "detalle": "No tiene permisos para ver esta página."
+  },
+  "estados": {
+    "SOLICITADA": "Solicitada",
+    "ACEPTADA": "Aceptada",
+    "RECHAZADA": "Rechazada",
+    "CANCELADA": "Cancelada",
+    "EN_CURSO": "En curso",
+    "CONCLUIDA": "Concluida",
+    "EVALUADA": "Evaluada"
+  },
+  "tipos": {
+    "ENLACE": "Enlace",
+    "PDF": "PDF",
+    "VIDEO": "Video",
+    "DOCUMENTO": "Documento",
+    "PRESENTACION": "Presentación",
+    "OTRO": "Otro"
+  },
+  "sesion": {
+    "volver": "Volver al inicio",
+    "cargando": "Cargando sesión…",
+    "errorCarga": "No se pudo cargar la sesión.",
+    "tutor": "Tutor",
+    "estudiante": "Estudiante",
+    "fecha": "Fecha y hora",
+    "duracion": "Duración",
+    "minutos": "{{n}} minutos",
+    "tema": "Tema"
+  },
+  "recursos": {
+    "titulo": "Recursos de estudio",
+    "vacio": "Todavía no hay recursos para esta sesión.",
+    "agregar": "Agregar un recurso",
+    "campoTitulo": "Título",
+    "campoUrl": "Enlace (URL)",
+    "campoTipo": "Tipo",
+    "enviar": "Agregar recurso",
+    "eliminar": "Eliminar",
+    "eliminarA": "Eliminar el recurso {{titulo}}",
+    "errorTitulo": "El título es obligatorio (máximo 150 caracteres).",
+    "errorUrl": "Ingrese una URL válida que empiece por http:// o https://.",
+    "agregado": "Recurso agregado.",
+    "eliminado": "Recurso eliminado.",
+    "errorGenerico": "No se pudo guardar el recurso.",
+    "errorCarga": "No se pudieron cargar los recursos."
+  },
+  "evaluacion": {
+    "titulo": "Evaluación de la tutoría",
+    "instruccion": "Califique la tutoría de 1 a 5 estrellas.",
+    "calificacion": "Calificación",
+    "estrellas": "{{n}} de 5 estrellas",
+    "comentario": "Comentario (opcional)",
+    "enviar": "Enviar evaluación",
+    "errorCalificacion": "Seleccione una calificación de 1 a 5 estrellas.",
+    "resumen": "Calificación: {{n}} de 5",
+    "exito": "¡Gracias! Su evaluación fue registrada.",
+    "errorGenerico": "No se pudo registrar la evaluación.",
+    "esperando": "Esperando la evaluación del estudiante.",
+    "noDisponible": "La evaluación estará disponible cuando la sesión concluya."
   }
 }

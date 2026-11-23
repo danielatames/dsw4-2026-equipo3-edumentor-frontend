@@ -5,6 +5,7 @@ import { authGuard, guestGuard } from './core/guards/auth.guard';
 import { LoginComponent } from './features/auth/login/login.component';
 import { RegisterComponent } from './features/auth/register/register.component';
 import { HomeComponent } from './features/home/home.component';
+import { SesionDetalleComponent } from './features/sesiones/detalle/sesion-detalle.component';
 
 @Component({
   selector: 'app-acceso-denegado',
@@ -18,6 +19,7 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent, canActivate: [guestGuard] },
   { path: 'register', component: RegisterComponent, canActivate: [guestGuard] },
   { path: 'home', component: HomeComponent, canActivate: [authGuard] },
+  { path: 'sesiones/:id', component: SesionDetalleComponent, canActivate: [authGuard] },
   { path: 'acceso-denegado', component: AccesoDenegadoComponent },
   { path: '**', redirectTo: 'home' },
 ];

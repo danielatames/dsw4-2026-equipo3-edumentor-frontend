@@ -56,5 +56,64 @@
   "accesoDenegado": {
     "titulo": "Access denied",
     "detalle": "You do not have permission to view this page."
+  },
+  "estados": {
+    "SOLICITADA": "Requested",
+    "ACEPTADA": "Confirmed",
+    "RECHAZADA": "Rejected",
+    "CANCELADA": "Cancelled",
+    "EN_CURSO": "In session",
+    "CONCLUIDA": "Completed",
+    "EVALUADA": "Reviewed"
+  },
+  "tipos": {
+    "ENLACE": "Link",
+    "PDF": "PDF",
+    "VIDEO": "Video",
+    "DOCUMENTO": "Document",
+    "PRESENTACION": "Presentation",
+    "OTRO": "Other"
+  },
+  "sesion": {
+    "volver": "Back to home",
+    "cargando": "Loading session…",
+    "errorCarga": "Could not load the session.",
+    "tutor": "Tutor",
+    "estudiante": "Student",
+    "fecha": "Date and time",
+    "duracion": "Duration",
+    "minutos": "{{n}} minutes",
+    "tema": "Topic"
+  },
+  "recursos": {
+    "titulo": "Study resources",
+    "vacio": "There are no resources for this session yet.",
+    "agregar": "Add a resource",
+    "campoTitulo": "Title",
+    "campoUrl": "Link (URL)",
+    "campoTipo": "Type",
+    "enviar": "Add resource",
+    "eliminar": "Delete",
+    "eliminarA": "Delete the resource {{titulo}}",
+    "errorTitulo": "The title is required (maximum 150 characters).",
+    "errorUrl": "Enter a valid URL starting with http:// or https://.",
+    "agregado": "Resource added.",
+    "eliminado": "Resource deleted.",
+    "errorGenerico": "Could not save the resource.",
+    "errorCarga": "Could not load the resources."
+  },
+  "evaluacion": {
+    "titulo": "Tutoring evaluation",
+    "instruccion": "Rate the tutoring session from 1 to 5 stars.",
+    "calificacion": "Rating",
+    "estrellas": "{{n}} of 5 stars",
+    "comentario": "Comment (optional)",
+    "enviar": "Submit evaluation",
+    "errorCalificacion": "Select a rating from 1 to 5 stars.",
+    "resumen": "Rating: {{n}} of 5",
+    "exito": "Thank you! Your evaluation was recorded.",
+    "errorGenerico": "Could not record the evaluation.",
+    "esperando": "Waiting for the student's evaluation.",
+    "noDisponible": "The evaluation will be available once the session is completed."
   }
 }
