@@ -30,7 +30,7 @@ let contador = 0;
             (change)="seleccionar(n)"
             (blur)="alTocar()"
           />
-          <label class="star-label" [for]="idBase + '-' + n">
+          <label class="star-label" [class.activa]="n <= (valor() ?? 0)" [for]="idBase + '-' + n">
             <span aria-hidden="true">{{ n <= (valor() ?? 0) ? '★' : '☆' }}</span>
             <span class="visually-hidden">{{ 'evaluacion.estrellas' | translate: { n: n } }}</span>
           </label>
@@ -40,14 +40,15 @@ let contador = 0;
   `,
   styles: `
     .star-rating { border: 0; margin: 0; padding: 0; }
-    legend { font-weight: 600; color: var(--verde-900); padding: 0; margin-bottom: .35rem; }
+    legend { font-weight: 700; color: var(--tinta); padding: 0; margin-bottom: .35rem; }
     .star-row { display: flex; gap: .25rem; }
     .star-input { position: absolute; opacity: 0; width: 1px; height: 1px; }
     .star-label {
       font-size: 2.2rem; line-height: 1; cursor: pointer; padding: .1rem .2rem;
-      color: var(--verde-700); border-radius: 8px;
+      color: var(--tinta); border-radius: 4px; border: 2px solid transparent;
     }
-    .star-input:focus-visible + .star-label { outline: 3px solid var(--verde-500); outline-offset: 2px; }
+    .star-label.activa { background: var(--estrella-fondo, var(--resaltador)); color: var(--estrella-color, var(--tinta)); border-color: var(--estrella-borde, transparent); }
+    .star-input:focus-visible + .star-label { outline: 3px solid var(--primario); outline-offset: 2px; }
     .star-input:disabled + .star-label { cursor: not-allowed; opacity: .6; }
     .visually-hidden {
       position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
