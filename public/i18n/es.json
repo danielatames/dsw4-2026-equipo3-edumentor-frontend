@@ -117,7 +117,12 @@
     "noDisponible": "La evaluación estará disponible cuando la sesión concluya."
   },
   "nav": {
-  "principal": "Navegación principal",
-  "inicio": "Inicio"
-}
+    "principal": "Navegación principal",
+    "inicio": "Inicio"
+  },
+  "errores": {
+    "red": "No se pudo conectar con el servidor. Revise su conexión e intente de nuevo.",
+    "servidor": "Ocurrió un error en el servidor. Intente de nuevo en unos minutos.",
+    "prohibido": "No tiene permiso para realizar esta acción."
+  }
 }
