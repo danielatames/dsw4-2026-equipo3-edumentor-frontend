@@ -2,7 +2,8 @@ import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
+import { ErrorApiService } from '../../../core/services/error-api.service';
 import { AuthService } from '../../../core/services/auth.service';
 import { Rol } from '../../../core/models/auth.models';
 import { AuthShellComponent } from '../../../shared/auth-shell/auth-shell.component';
@@ -72,7 +73,7 @@ export class RegisterComponent {
   private readonly fb = inject(FormBuilder);
   private readonly auth = inject(AuthService);
   private readonly router = inject(Router);
-  private readonly translate = inject(TranslateService);
+  private readonly errores = inject(ErrorApiService);
 
   readonly form = this.fb.nonNullable.group({
     carne: ['', [Validators.required, Validators.maxLength(20)]],
@@ -96,7 +97,7 @@ export class RegisterComponent {
       next: () => this.router.navigate(['/home']),
       error: (e: HttpErrorResponse) => {
         this.cargando.set(false);
-        this.error.set(e.error?.detail ?? this.translate.instant('auth.register.errorGenerico'));
+        this.error.set(this.errores.mensaje(e, 'auth.register.errorGenerico'));
       },
     });
   }

@@ -117,7 +117,12 @@
     "noDisponible": "The evaluation will be available once the session is completed."
   },
   "nav": {
-  "principal": "Main navigation",
-  "inicio": "Home"
-}
+    "principal": "Main navigation",
+    "inicio": "Home"
+  },
+  "errores": {
+    "red": "Could not reach the server. Check your connection and try again.",
+    "servidor": "A server error occurred. Please try again in a few minutes.",
+    "prohibido": "You do not have permission to perform this action."
+  }
 }
