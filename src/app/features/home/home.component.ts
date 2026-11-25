@@ -1,15 +1,11 @@
-import { Component, inject, signal } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { JsonPipe } from '@angular/common';
-import { RouterLink } from '@angular/router';
 import { Component, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { AuthService } from '../../core/services/auth.service';
 
 @Component({
   selector: 'app-home',
-  imports: [JsonPipe, RouterLink, TranslatePipe],
-  imports: [TranslatePipe],
+  imports: [RouterLink, TranslatePipe],
   template: `
     <div class="page">
       <section class="welcome">
@@ -19,7 +15,6 @@ import { AuthService } from '../../core/services/auth.service';
         @if (auth.rol() === 'ESTUDIANTE') {
           <a class="btn btn-outline" routerLink="/sesiones/nueva">{{ 'sesiones.nueva' | translate }}</a>
         }
-        <button type="button" class="btn btn-outline" (click)="probar()">{{ 'home.probar' | translate }}</button>
       </section>
     </div>
   `,
