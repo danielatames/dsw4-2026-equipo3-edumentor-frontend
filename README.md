@@ -35,6 +35,22 @@ Abrir http://localhost:4200.
 ## Estilos
 La paleta vive en variables CSS 
 
+## Sesiones de tutoría
+| Ruta | Rol | Qué hace |
+|---|---|---|
+| `/sesiones` | Todos | Listado según el rol (estudiante: las suyas; tutor: las que le piden; coordinador: todas) con filtro por estado y acciones |
+| `/sesiones/nueva` | ESTUDIANTE | Formulario reactivo de reserva (materia, tutor, fecha, hora, duración, tema) |
+| `/sesiones/:id` | Todos | Detalle, recursos y evaluación |
+
+Acciones por rol y estado (reflejan la máquina de estados del backend; las reglas viven en `core/utils/sesion-reglas.ts`):
+- TUTOR: aceptar o rechazar una `SOLICITADA`; iniciar una `ACEPTADA`; concluir una `EN_CURSO`; cancelar `SOLICITADA` o `ACEPTADA`.
+- ESTUDIANTE: cancelar `SOLICITADA` o `ACEPTADA`; evaluar una `CONCLUIDA` (desde el detalle).
+- Cancelar exige al menos 2 horas de anticipación (el botón se deshabilita y el backend lo valida de nuevo).
+
+Endpoints usados: `GET/POST /sesiones`, `PATCH /sesiones/{id}/{aceptar|rechazar|cancelar|iniciar|concluir}`, `GET /materias`, `GET /disponibilidades` (de aquí salen los tutores que se pueden elegir).
+
+Pruebas: `ng test` (`sesion-reglas.spec.ts` y `sesion.service.spec.ts`).
+
 ## Flujo de trabajo en Git
 - Prohibido hacer commits directos a `main`.
 - Una rama por funcionalidad (`feature/*`).

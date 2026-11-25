@@ -118,6 +118,78 @@
   },
   "nav": {
     "principal": "Navegación principal",
+    "sesiones": "Mis sesiones"
+  },
+  "dias": {
+    "MONDAY": "Lunes",
+    "TUESDAY": "Martes",
+    "WEDNESDAY": "Miércoles",
+    "THURSDAY": "Jueves",
+    "FRIDAY": "Viernes",
+    "SATURDAY": "Sábado",
+    "SUNDAY": "Domingo"
+  },
+  "sesiones": {
+    "titulo": "Sesiones de tutoría",
+    "nueva": "Reservar sesión",
+    "filtro": "Filtrar por estado",
+    "todos": "Todos los estados",
+    "cargando": "Cargando sesiones…",
+    "errorCarga": "No se pudieron cargar las sesiones.",
+    "vacio": "No hay sesiones para mostrar.",
+    "verDetalle": "Ver detalle",
+    "evaluar": "Evaluar tutoría",
+    "ariaAccion": "{{accion}}: sesión de {{materia}}",
+    "acciones": {
+      "aceptar": "Aceptar",
+      "rechazar": "Rechazar",
+      "cancelar": "Cancelar",
+      "iniciar": "Iniciar",
+      "concluir": "Concluir"
+    },
+    "confirmar": {
+      "rechazar": "¿Rechazar esta solicitud?",
+      "cancelar": "¿Cancelar esta sesión?",
+      "si": "Sí, confirmar",
+      "no": "No, volver"
+    },
+    "cancelarBloqueado": "Solo se puede cancelar con al menos {{horas}} horas de anticipación.",
+    "exito": {
+      "aceptar": "Sesión aceptada.",
+      "rechazar": "Solicitud rechazada.",
+      "cancelar": "Sesión cancelada.",
+      "iniciar": "Sesión iniciada.",
+      "concluir": "Sesión concluida."
+    },
+    "errorAccion": "No se pudo completar la acción.",
+    "creada": "Sesión solicitada. Queda pendiente de que el tutor la acepte."
+  },
+  "nuevaSesion": {
+    "titulo": "Reservar una tutoría",
+    "intro": "Elija la materia, el tutor y el horario. El tutor deberá aceptar la solicitud.",
+    "volver": "Volver a mis sesiones",
+    "cargando": "Cargando materias y tutores…",
+    "errorCarga": "No se pudieron cargar las materias y los tutores.",
+    "sinTutores": "Por ahora no hay tutores con disponibilidad. Intente más tarde.",
+    "materia": "Materia",
+    "tutor": "Tutor",
+    "elegir": "Seleccione…",
+    "disponibilidad": "Disponibilidad de {{nombre}}:",
+    "fecha": "Fecha",
+    "hora": "Hora de inicio",
+    "duracion": "Duración",
+    "tema": "Tema a tratar (opcional)",
+    "enviar": "Solicitar sesión",
+    "enviando": "Enviando…",
+    "errorMateria": "Seleccione una materia.",
+    "errorTutor": "Seleccione un tutor.",
+    "errorFecha": "Seleccione una fecha.",
+    "errorHora": "Seleccione una hora.",
+    "errorPasada": "La fecha y la hora deben ser futuras.",
+    "errorDuracion": "La duración debe estar entre {{min}} y {{max}} minutos.",
+    "errorTema": "El tema no puede superar los 300 caracteres.",
+    "avisoDisponibilidad": "Ese horario queda fuera de la disponibilidad del tutor, así que el sistema probablemente rechazará la solicitud.",
+    "errorGenerico": "No se pudo solicitar la sesión."
     "inicio": "Inicio"
   },
   "errores": {
