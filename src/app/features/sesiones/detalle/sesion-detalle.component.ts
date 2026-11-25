@@ -15,7 +15,7 @@ import {
   Sesion,
   TIPOS_ARCHIVO,
 } from '../../../core/models/tutoria.models';
-import { detalleProblema } from '../../../core/utils/problem-detail';
+import { ErrorApiService } from '../../../core/services/error-api.service';
 import { StarRatingComponent } from '../../../shared/star-rating/star-rating.component';
 
 const ESTADOS_CON_RECURSOS: readonly EstadoSesion[] = ['ACEPTADA', 'EN_CURSO', 'CONCLUIDA', 'EVALUADA'];
@@ -173,6 +173,7 @@ export class SesionDetalleComponent implements OnInit {
   private readonly route = inject(ActivatedRoute);
   private readonly fb = inject(FormBuilder);
   private readonly translate = inject(TranslateService);
+  private readonly errores = inject(ErrorApiService);
   private readonly sesiones = inject(SesionDetalleService);
   private readonly recursosApi = inject(RecursoService);
   private readonly evaluacionesApi = inject(EvaluacionService);
@@ -257,7 +258,7 @@ export class SesionDetalleComponent implements OnInit {
       },
       error: (e: HttpErrorResponse) => {
         this.guardandoRecurso.set(false);
-        this.errorRecurso.set(detalleProblema(e) ?? this.translate.instant('recursos.errorGenerico'));
+        this.errorRecurso.set(this.errores.mensaje(e, 'recursos.errorGenerico'));
       },
     });
   }
@@ -275,7 +276,7 @@ export class SesionDetalleComponent implements OnInit {
         this.mensajeRecurso.set(this.translate.instant('recursos.eliminado'));
       },
       error: (e: HttpErrorResponse) =>
-        this.errorRecurso.set(detalleProblema(e) ?? this.translate.instant('recursos.errorGenerico')),
+        this.errorRecurso.set(this.errores.mensaje(e, 'recursos.errorGenerico')),
     });
   }
 
@@ -302,7 +303,7 @@ export class SesionDetalleComponent implements OnInit {
         },
         error: (e: HttpErrorResponse) => {
           this.guardandoEvaluacion.set(false);
-          this.errorEvaluacion.set(detalleProblema(e) ?? this.translate.instant('evaluacion.errorGenerico'));
+          this.errorEvaluacion.set(this.errores.mensaje(e, 'evaluacion.errorGenerico'));
         },
       });
   }
@@ -322,7 +323,7 @@ export class SesionDetalleComponent implements OnInit {
     this.recursosApi.listar(sesionId).subscribe({
       next: (lista) => this.recursos.set(lista),
       error: (e: HttpErrorResponse) =>
-        this.errorRecurso.set(detalleProblema(e) ?? this.translate.instant('recursos.errorCarga')),
+        this.errorRecurso.set(this.errores.mensaje(e, 'recursos.errorCarga')),
     });
   }
 
@@ -334,8 +335,9 @@ export class SesionDetalleComponent implements OnInit {
   }
 
   private fallarCarga(e: HttpErrorResponse | null): void {
-    const mensaje =
-      (e && detalleProblema(e)) ?? this.translate.instant('sesion.errorCarga');
+    const mensaje = e
+      ? this.errores.mensaje(e, 'sesion.errorCarga')
+      : this.translate.instant('sesion.errorCarga');
     this.errorCarga.set(mensaje);
     this.cargando.set(false);
   }

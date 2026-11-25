@@ -190,5 +190,11 @@
     "errorTema": "The topic cannot exceed 300 characters.",
     "avisoDisponibilidad": "That time is outside the tutor's availability, so the system will probably reject the request.",
     "errorGenerico": "The session could not be requested."
+    "inicio": "Home"
+  },
+  "errores": {
+    "red": "Could not reach the server. Check your connection and try again.",
+    "servidor": "A server error occurred. Please try again in a few minutes.",
+    "prohibido": "You do not have permission to perform this action."
   }
 }

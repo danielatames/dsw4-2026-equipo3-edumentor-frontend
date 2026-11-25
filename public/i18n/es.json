@@ -190,5 +190,11 @@
     "errorTema": "El tema no puede superar los 300 caracteres.",
     "avisoDisponibilidad": "Ese horario queda fuera de la disponibilidad del tutor, así que el sistema probablemente rechazará la solicitud.",
     "errorGenerico": "No se pudo solicitar la sesión."
+    "inicio": "Inicio"
+  },
+  "errores": {
+    "red": "No se pudo conectar con el servidor. Revise su conexión e intente de nuevo.",
+    "servidor": "Ocurrió un error en el servidor. Intente de nuevo en unos minutos.",
+    "prohibido": "No tiene permiso para realizar esta acción."
   }
 }
