@@ -1,4 +1,3 @@
-import { Component, inject } from '@angular/core';
 import { Component, computed, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
@@ -15,8 +14,6 @@ import { LanguageSwitcherComponent } from './shared/language-switcher/language-s
     @if (auth.usuario(); as u) {
       <header class="topbar">
         <a class="brand-link" routerLink="/home">{{ 'app.name' | translate }}</a>
-        <nav [attr.aria-label]="'nav.principal' | translate">
-          <a class="nav-link" routerLink="/sesiones" routerLinkActive="activo">{{ 'nav.sesiones' | translate }}</a>
         <nav class="topbar-nav" [attr.aria-label]="'nav.principal' | translate">
           @for (e of enlaces(); track e.ruta) {
             <a [routerLink]="e.ruta" routerLinkActive="activo" ariaCurrentWhenActive="page">
