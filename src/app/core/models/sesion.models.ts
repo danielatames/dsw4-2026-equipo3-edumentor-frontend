@@ -28,6 +28,22 @@ export interface Materia {
   creditos: number;
 }
 
+/** Datos que envía el coordinador al crear o editar una materia. */
+export interface MateriaRequest {
+  codigoMateria: string;
+  nombreMateria: string;
+  carrera: string;
+  creditos: number;
+}
+
+/** Filtros opcionales del catálogo (GET /materias). */
+export interface FiltroMaterias {
+  nombre?: string;
+  carrera?: string;
+  pagina: number;
+  tamano: number;
+}
+
 export interface PaginaResponse<T> {
   contenido: T[];
   pagina: number;

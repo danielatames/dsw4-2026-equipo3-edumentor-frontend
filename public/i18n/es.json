@@ -2,7 +2,12 @@
   "app": {
     "name": "EduMentor Hub",
     "skip": "Saltar al contenido",
-    "logout": "Cerrar sesión"
+    "logout": "Cerrar sesión",
+    "salir": {
+      "titulo": "¿Cerrar sesión?",
+      "confirmar": "Sí, cerrar sesión",
+      "cancelar": "Cancelar"
+    }
   },
   "idioma": {
     "etiqueta": "Idioma",
@@ -119,7 +124,8 @@
   "nav": {
     "principal": "Navegación principal",
     "sesiones": "Mis sesiones",
-    "inicio": "Inicio"
+    "inicio": "Inicio",
+    "materias": "Materias"
   },
   "dias": {
     "MONDAY": "Lunes",
@@ -196,5 +202,59 @@
     "red": "No se pudo conectar con el servidor. Revise su conexión e intente de nuevo.",
     "servidor": "Ocurrió un error en el servidor. Intente de nuevo en unos minutos.",
     "prohibido": "No tiene permiso para realizar esta acción."
+  },
+  "materias": {
+    "titulo": "Catálogo de materias",
+    "intro": "Consulte las materias en las que se ofrecen tutorías.",
+    "nueva": "Nueva materia",
+    "buscarNombre": "Buscar por nombre",
+    "filtroCarrera": "Carrera",
+    "todasCarreras": "Todas las carreras",
+    "buscar": "Buscar",
+    "limpiar": "Limpiar filtros",
+    "cargando": "Cargando materias…",
+    "errorCarga": "No se pudieron cargar las materias.",
+    "vacio": "No hay materias que coincidan con la búsqueda.",
+    "tabla": "Materias del catálogo",
+    "codigo": "Código",
+    "nombre": "Materia",
+    "carrera": "Carrera",
+    "creditos": "Créditos",
+    "acciones": "Acciones",
+    "editar": "Editar",
+    "eliminar": "Eliminar",
+    "ariaEditar": "Editar {{materia}}",
+    "ariaEliminar": "Eliminar {{materia}}",
+    "confirmarEliminar": "¿Eliminar {{materia}}? Esta acción no se puede deshacer.",
+    "si": "Sí, eliminar",
+    "no": "Cancelar",
+    "eliminada": "Materia eliminada.",
+    "errorEliminar": "No se pudo eliminar la materia.",
+    "creada": "Materia creada correctamente.",
+    "actualizada": "Materia actualizada correctamente.",
+    "paginacion": "Paginación del catálogo",
+    "anterior": "Anterior",
+    "siguiente": "Siguiente",
+    "pagina": "Página {{actual}} de {{total}} · {{n}} materias",
+    "form": {
+      "tituloNueva": "Nueva materia",
+      "tituloEditar": "Editar materia",
+      "intro": "Complete los datos de la materia. Todos los campos son obligatorios.",
+      "volver": "← Volver al catálogo",
+      "codigo": "Código",
+      "codigoAyuda": "Ejemplo: IF0009. Se guarda en mayúsculas.",
+      "nombre": "Nombre de la materia",
+      "carrera": "Carrera",
+      "creditos": "Créditos",
+      "errorCodigo": "Ingrese un código de máximo 20 caracteres.",
+      "errorNombre": "Ingrese un nombre de máximo 120 caracteres.",
+      "errorCarrera": "Ingrese una carrera de máximo 120 caracteres.",
+      "errorCreditos": "Los créditos deben ser un número entero entre {{min}} y {{max}}.",
+      "guardar": "Guardar materia",
+      "guardando": "Guardando…",
+      "cargando": "Cargando materia…",
+      "errorCarga": "No se pudo cargar la materia.",
+      "errorGenerico": "No se pudo guardar la materia."
+    }
   }
 }
