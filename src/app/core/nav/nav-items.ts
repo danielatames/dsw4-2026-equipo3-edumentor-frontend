@@ -9,7 +9,7 @@ export interface NavItem {
 export const NAV_ITEMS: NavItem[] = [
   { ruta: '/home', clave: 'nav.inicio' },
   { ruta: '/sesiones', clave: 'nav.sesiones' },
+  { ruta: '/materias', clave: 'nav.materias' },
   //falta:
-  //{ ruta: '/materias', clave: 'nav.materias' },
   //{ ruta: '/disponibilidad', clave: 'nav.disponibilidad', roles: ['TUTOR'] },
 ];

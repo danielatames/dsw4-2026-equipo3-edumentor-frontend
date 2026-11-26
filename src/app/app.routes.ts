@@ -8,6 +8,8 @@ import { HomeComponent } from './features/home/home.component';
 import { SesionesListaComponent } from './features/sesiones/lista/sesiones-lista.component';
 import { SesionNuevaComponent } from './features/sesiones/nueva/sesion-nueva.component';
 import { SesionDetalleComponent } from './features/sesiones/detalle/sesion-detalle.component';
+import { MateriasCatalogoComponent } from './features/materias/catalogo/materias-catalogo.component';
+import { MateriaFormComponent } from './features/materias/formulario/materia-form.component';
 
 @Component({
   selector: 'app-acceso-denegado',
@@ -29,6 +31,19 @@ export const routes: Routes = [
     data: { roles: ['ESTUDIANTE'] },
   },
   { path: 'sesiones/:id', component: SesionDetalleComponent, canActivate: [authGuard] },
+  { path: 'materias', component: MateriasCatalogoComponent, canActivate: [authGuard] },
+  {
+    path: 'materias/nueva',
+    component: MateriaFormComponent,
+    canActivate: [roleGuard],
+    data: { roles: ['COORDINADOR'] },
+  },
+  {
+    path: 'materias/:id/editar',
+    component: MateriaFormComponent,
+    canActivate: [roleGuard],
+    data: { roles: ['COORDINADOR'] },
+  },
   { path: 'acceso-denegado', component: AccesoDenegadoComponent },
   { path: '**', redirectTo: 'home' },
 ];
