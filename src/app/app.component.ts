@@ -5,10 +5,18 @@ import { AuthService } from './core/services/auth.service';
 import { IdiomaService } from './core/services/idioma.service';
 import { NAV_ITEMS } from './core/nav/nav-items';
 import { LanguageSwitcherComponent } from './shared/language-switcher/language-switcher.component';
+import { DialogoConfirmacionComponent } from './shared/dialogo-confirmacion/dialogo-confirmacion.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, TranslatePipe, LanguageSwitcherComponent],
+  imports: [
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive,
+    TranslatePipe,
+    LanguageSwitcherComponent,
+    DialogoConfirmacionComponent,
+  ],
   template: `
     <a class="skip-link" href="#contenido">{{ 'app.skip' | translate }}</a>
     @if (auth.usuario(); as u) {
@@ -24,9 +32,20 @@ import { LanguageSwitcherComponent } from './shared/language-switcher/language-s
         <span>{{ u.nombre }} {{ u.apellido }}</span>
         <span class="chip">{{ 'roles.' + u.rol | translate }}</span>
         <app-language-switcher />
-        <button type="button" class="btn" (click)="auth.logout()">{{ 'app.logout' | translate }}</button>
+        <button type="button" class="btn" (click)="dialogoSalir.abrir()">{{ 'app.logout' | translate }}</button>
       </header>
     }
+    <!--
+      La confirmación va en el botón y no en AuthService.logout(), porque el interceptor
+      también llama a logout() cuando el token expira (401) y ese cierre debe ser automático.
+    -->
+    <app-dialogo-confirmacion
+      #dialogoSalir
+      [titulo]="'app.salir.titulo' | translate"
+      [textoConfirmar]="'app.salir.confirmar' | translate"
+      [textoCancelar]="'app.salir.cancelar' | translate"
+      (confirmado)="auth.logout()"
+    />
     <main id="contenido">
       <router-outlet />
     </main>

@@ -2,7 +2,12 @@
   "app": {
     "name": "EduMentor Hub",
     "skip": "Skip to content",
-    "logout": "Sign out"
+    "logout": "Sign out",
+    "salir": {
+      "titulo": "Sign out?",
+      "confirmar": "Yes, sign out",
+      "cancelar": "Cancel"
+    }
   },
   "idioma": {
     "etiqueta": "Language",
