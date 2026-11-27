@@ -10,6 +10,6 @@ export const NAV_ITEMS: NavItem[] = [
   { ruta: '/home', clave: 'nav.inicio' },
   { ruta: '/sesiones', clave: 'nav.sesiones' },
   { ruta: '/materias', clave: 'nav.materias' },
-  //falta:
-  //{ ruta: '/disponibilidad', clave: 'nav.disponibilidad', roles: ['TUTOR'] },
+  { ruta: '/disponibilidad', clave: 'nav.disponibilidad', roles: ['TUTOR'] },
+  { ruta: '/tutores', clave: 'nav.tutores', roles: ['ESTUDIANTE', 'COORDINADOR'] },
 ];
