@@ -10,6 +10,8 @@ import { SesionNuevaComponent } from './features/sesiones/nueva/sesion-nueva.com
 import { SesionDetalleComponent } from './features/sesiones/detalle/sesion-detalle.component';
 import { MateriasCatalogoComponent } from './features/materias/catalogo/materias-catalogo.component';
 import { MateriaFormComponent } from './features/materias/formulario/materia-form.component';
+import { MiHorarioComponent } from './features/disponibilidad/mi-horario/mi-horario.component';
+import { TutoresDisponiblesComponent } from './features/disponibilidad/tutores/tutores-disponibles.component';
 
 @Component({
   selector: 'app-acceso-denegado',
@@ -44,6 +46,13 @@ export const routes: Routes = [
     canActivate: [roleGuard],
     data: { roles: ['COORDINADOR'] },
   },
+  {
+    path: 'disponibilidad',
+    component: MiHorarioComponent,
+    canActivate: [roleGuard],
+    data: { roles: ['TUTOR'] },
+  },
+  { path: 'tutores', component: TutoresDisponiblesComponent, canActivate: [authGuard] },
   { path: 'acceso-denegado', component: AccesoDenegadoComponent },
   { path: '**', redirectTo: 'home' },
 ];

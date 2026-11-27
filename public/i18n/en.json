@@ -125,7 +125,9 @@
     "principal": "Main navigation",
     "sesiones": "My sessions",
     "inicio": "Home",
-    "materias": "Subjects"
+    "materias": "Subjects",
+    "disponibilidad": "My schedule",
+    "tutores": "Tutors"
   },
   "dias": {
     "MONDAY": "Monday",
@@ -256,5 +258,49 @@
       "errorCarga": "The subject could not be loaded.",
       "errorGenerico": "The subject could not be saved."
     }
+  },
+  "horario": {
+    "titulo": "My tutoring schedule",
+    "intro": "Set the weekly time blocks when you can tutor. Students can only book within your active blocks.",
+    "semana": "My week",
+    "cargando": "Loading your schedule…",
+    "errorCarga": "Your schedule could not be loaded.",
+    "sinBloques": "No blocks",
+    "inactivo": "Inactive",
+    "editar": "Edit",
+    "activar": "Activate",
+    "desactivar": "Deactivate",
+    "ariaEditar": "Edit {{dia}} block from {{inicio}} to {{fin}}",
+    "ariaActivar": "Activate {{dia}} block from {{inicio}} to {{fin}}",
+    "ariaDesactivar": "Deactivate {{dia}} block from {{inicio}} to {{fin}}",
+    "creado": "Block added to your schedule.",
+    "actualizado": "Block updated.",
+    "activado": "Block activated.",
+    "desactivado": "Block deactivated. Students can no longer book at that time.",
+    "errorGuardar": "The block could not be saved.",
+    "errorEstado": "The block status could not be changed.",
+    "form": {
+      "tituloNuevo": "Add block",
+      "tituloEditar": "Edit block",
+      "dia": "Day",
+      "inicio": "Start time",
+      "fin": "End time",
+      "errorInicio": "Select the start time.",
+      "errorFin": "Select the end time.",
+      "errorOrden": "The end time must be after the start time.",
+      "agregar": "Add block",
+      "guardar": "Save changes",
+      "guardando": "Saving…",
+      "cancelar": "Cancel editing"
+    }
+  },
+  "tutores": {
+    "titulo": "Available tutors",
+    "intro": "See which days and times each tutor is available.",
+    "cargando": "Loading tutors…",
+    "errorCarga": "The tutors’ schedules could not be loaded.",
+    "vacio": "There are no tutors with available schedules yet.",
+    "filtro": "Tutor",
+    "todos": "All tutors"
   }
 }

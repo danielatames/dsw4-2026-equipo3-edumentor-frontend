@@ -125,7 +125,9 @@
     "principal": "Navegación principal",
     "sesiones": "Mis sesiones",
     "inicio": "Inicio",
-    "materias": "Materias"
+    "materias": "Materias",
+    "disponibilidad": "Mi horario",
+    "tutores": "Tutores"
   },
   "dias": {
     "MONDAY": "Lunes",
@@ -256,5 +258,49 @@
       "errorCarga": "No se pudo cargar la materia.",
       "errorGenerico": "No se pudo guardar la materia."
     }
+  },
+  "horario": {
+    "titulo": "Mi horario de tutorías",
+    "intro": "Indique los bloques de la semana en que puede dar tutorías. Los estudiantes solo podrán reservar dentro de sus bloques activos.",
+    "semana": "Mi semana",
+    "cargando": "Cargando su horario…",
+    "errorCarga": "No se pudo cargar su horario.",
+    "sinBloques": "Sin bloques",
+    "inactivo": "Inactivo",
+    "editar": "Editar",
+    "activar": "Activar",
+    "desactivar": "Desactivar",
+    "ariaEditar": "Editar bloque del {{dia}} de {{inicio}} a {{fin}}",
+    "ariaActivar": "Activar bloque del {{dia}} de {{inicio}} a {{fin}}",
+    "ariaDesactivar": "Desactivar bloque del {{dia}} de {{inicio}} a {{fin}}",
+    "creado": "Bloque agregado a su horario.",
+    "actualizado": "Bloque actualizado.",
+    "activado": "Bloque activado.",
+    "desactivado": "Bloque desactivado. Los estudiantes ya no podrán reservar en ese horario.",
+    "errorGuardar": "No se pudo guardar el bloque.",
+    "errorEstado": "No se pudo cambiar el estado del bloque.",
+    "form": {
+      "tituloNuevo": "Agregar bloque",
+      "tituloEditar": "Editar bloque",
+      "dia": "Día",
+      "inicio": "Hora de inicio",
+      "fin": "Hora de fin",
+      "errorInicio": "Seleccione la hora de inicio.",
+      "errorFin": "Seleccione la hora de fin.",
+      "errorOrden": "La hora de fin debe ser posterior a la hora de inicio.",
+      "agregar": "Agregar bloque",
+      "guardar": "Guardar cambios",
+      "guardando": "Guardando…",
+      "cancelar": "Cancelar edición"
+    }
+  },
+  "tutores": {
+    "titulo": "Tutores disponibles",
+    "intro": "Consulte qué días y en qué horarios atiende cada tutor.",
+    "cargando": "Cargando tutores…",
+    "errorCarga": "No se pudieron cargar los horarios de los tutores.",
+    "vacio": "Todavía no hay tutores con horarios disponibles.",
+    "filtro": "Tutor",
+    "todos": "Todos los tutores"
   }
 }
