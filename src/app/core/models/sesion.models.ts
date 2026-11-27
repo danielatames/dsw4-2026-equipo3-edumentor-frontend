@@ -61,6 +61,24 @@ export type DiaSemana =
   | 'SATURDAY'
   | 'SUNDAY';
 
+/** Días de la semana en orden de lunes a domingo (para mostrar horarios). */
+export const DIAS_SEMANA: readonly DiaSemana[] = [
+  'MONDAY',
+  'TUESDAY',
+  'WEDNESDAY',
+  'THURSDAY',
+  'FRIDAY',
+  'SATURDAY',
+  'SUNDAY',
+];
+
+/** Datos que envía el tutor al crear o editar un bloque. Horas en formato "HH:mm". */
+export interface DisponibilidadRequest {
+  diaSemana: DiaSemana;
+  horaInicio: string;
+  horaFin: string;
+}
+
 export interface Disponibilidad {
   id: number;
   tutorId: number;
